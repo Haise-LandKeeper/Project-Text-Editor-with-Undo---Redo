@@ -143,15 +143,15 @@ int main() {
             push(&undo, current);
             clear(&redo);
 
-            strcat(current, input); //Nối chuỗi Input mới vào cái current cũ
+            strcat(current, input); 
             enqueue(&history, "Nhap van ban", input);
             break;
         }
 
         case 2: {
             if (!isEmpty(undo)) {
-                push(&redo, current); //đưa cái hiện tại vào trong redo vì nó là undo
-                strcpy(current, pop(&undo)); //sau đó copy cái cái undo vào lại chỗ cũ trong current
+                push(&redo, current);
+                strcpy(current, pop(&undo)); 
                 enqueue(&history, "Undo", "");
             }
             break;
