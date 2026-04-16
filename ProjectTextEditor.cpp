@@ -15,7 +15,7 @@ struct Stack { Node* top; };
 struct QNode { char action[50]; char content[500]; QNode* next; };
 struct Queue { QNode* front; QNode* rear; };
 
-const char* folderPath = "Đường dẫn";
+const char* folderPath = "Đường dẫn";  //Lưu ý chỉnh lại theo direction của riêng bạn
 
 void setColor(int c) { SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), c); }
 void goToXY(int x, int y) { COORD c = { (SHORT)x, (SHORT)y }; SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), c); }
